@@ -5,6 +5,10 @@ import requests
 from typing import Dict, List, Any, Optional, Literal
 from dataclasses import dataclass, asdict
 import openai
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 DUCKDUCKGO_ENDPOINT = "https://api.duckduckgo.com"
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "")

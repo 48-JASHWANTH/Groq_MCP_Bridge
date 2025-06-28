@@ -3,8 +3,11 @@ import os
 import requests
 import argparse
 import json
+from dotenv import load_dotenv
 from groq_mcp_client import GroqClient
 
+# Load environment variables from .env file
+load_dotenv()
 
 def check_mcp_server():
     mcp_url = os.environ.get("MCP_SERVER_URL", "http://localhost:8000")
@@ -23,6 +26,7 @@ def main():
 
     if not os.environ.get("GROQ_API_KEY"):
         print("Error: GROQ_API_KEY environment variable is required")
+        print("Please set it in your .env file or environment variables")
         sys.exit(1)
 
     if args.query:

@@ -3,6 +3,10 @@ import json
 import requests
 import time
 from typing import Dict, List, Any, Optional
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY","")
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"

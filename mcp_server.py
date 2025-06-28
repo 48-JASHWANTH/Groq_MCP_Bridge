@@ -2,6 +2,10 @@ import os
 import json
 from flask import Flask, request, jsonify
 from mcp_integration import GroqMCPBridge, handle_groq_tool_call
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 PORT = int(os.environ.get("PORT", 8000))
 
