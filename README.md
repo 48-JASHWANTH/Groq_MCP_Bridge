@@ -47,15 +47,6 @@ This project provides a Model Context Protocol (MCP) server that integrates with
    python ask_groq.py "What is the latest news about AI?"
    ```
 
-## Key Changes from Claude Version
-
-- **API Integration**: Uses Groq's OpenAI-compatible API instead of Anthropic's Claude API
-- **Models**: Uses Groq models like `llama3-70b-8192` or `mixtral-8x7b-32768`
-- **Environment Variable**: Uses `GROQ_API_KEY` instead of `CLAUDE_API_KEY`
-- **Tool Calling**: Updated to use OpenAI-compatible tool calling format
-- **Streamlit UI**: Added web interface for easier interaction
-- **Dotenv Support**: Added support for loading API keys from .env file
-
 ## Available Models
 
 Groq supports various models including:
