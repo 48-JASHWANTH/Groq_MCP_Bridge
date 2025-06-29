@@ -126,7 +126,7 @@ with col1:
         st.session_state.conversation_history.append({"role": "assistant", "content": response})
         
         # Rerun to update the display
-        st.experimental_rerun()
+        st.rerun()
 
 with col2:
     # Sidebar for status and configuration
@@ -153,7 +153,7 @@ with col2:
         # Reset conversation but keep system message
         system_message = next((msg for msg in st.session_state.conversation_history if msg["role"] == "system"), None)
         st.session_state.conversation_history = [system_message] if system_message else []
-        st.experimental_rerun()
+        st.rerun()
     
     st.markdown("<h3>About</h3>", unsafe_allow_html=True)
     st.markdown("""
