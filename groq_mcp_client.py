@@ -113,7 +113,8 @@ class GroqClient:
                             "content": json.dumps(tool_response)
                         })
 
-                        return self.send_message("Please summarize the information from the tool call and don't send any more tool calls", conversation_history)
+                        # Changed this prompt to be more direct and avoid mentioning tool calls
+                        return self.send_message("Please answer the original query based on available information.", conversation_history)
 
             if not has_tool_call:
                 print("No tool calls")
